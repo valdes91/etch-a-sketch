@@ -1,0 +1,14 @@
+{
+	"name": "etch-a-sketch",
+	"version": "1.0.0",
+	"description": "## About",
+	"main": "main.js",
+	"scripts": {
+		"lint": "eslint ./"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"eslint": "^8.41.0"
+	}
+}
