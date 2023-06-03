@@ -4,6 +4,7 @@ function setUpGrid() {
 		row.classList.toggle('flex');
 		for (let j = 0; j < 16; j++) {
 			const gridSquare = document.createElement('div');
+			gridSquare.style.background = '#FFFFFF';
 			gridSquare.classList.toggle('cell');
 			row.appendChild(gridSquare);
 		}
