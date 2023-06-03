@@ -12,8 +12,9 @@ This is my attempt at the etch a sketch project from The Odin Project. This is o
 
 I wondered if there was a way to do it without the nested for loops, but what I found on google was pretty much similar to what I wrote. The difference was that in my CSS, i hard coded the height and width of the cells. But what about later on in the project when the user wants to select a different amount of cells for each row?
 
-The problem was that if the user is going to be able to choose how many cells are in each row, then the width for each cell needs to be dynamic. The solution was to make each cell have a flex basis of 100% so each cell takes up equal space in the row. Then, to get the height to dynamically change so the cells stay square, I used the aspect-ratio property for the cell and set it to 1/1.
+The problem was that if the user is going to be able to choose how many cells are in each row, then the width for each cell needs to be dynamic while keeping the total width of the grid static. The solution was to make each cell have a flex basis of 100% so each cell takes up equal space in the row. Then, to get the height to dynamically change so the cells stay square, I used the aspect-ratio property for the cell and set it to 1/1.
 
 Sources:
 [making a grid with flex](https://www.taniarascia.com/easiest-flex-grid-ever/)
+
 [keeping the grid cells square](https://stackoverflow.com/questions/2648733/make-a-div-square-when-there-is-a-dynamically-changing-width-based-on-percenta)
