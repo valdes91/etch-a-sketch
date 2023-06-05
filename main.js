@@ -1,8 +1,9 @@
-function setUpGrid() {
-	for (let i = 0; i < 16; i++) {
+function setUpGrid(cells = 16) {
+	grid.textContent = '';
+	for (let i = 0; i < cells; i++) {
 		const row = document.createElement('div');
 		row.classList.toggle('flex');
-		for (let j = 0; j < 16; j++) {
+		for (let j = 0; j < cells; j++) {
 			const gridSquare = document.createElement('div');
 			gridSquare.style.background = '#FFFFFF';
 			gridSquare.classList.toggle('cell');
@@ -36,9 +37,21 @@ function clearGrid() {
 	});
 }
 
+function changeGridText(e) {
+	const cellAmount = document.querySelector('.cell-amount');
+	cellAmount.textContent = `${e.target.value} X ${e.target.value}`;
+}
+
 const grid = document.querySelector('.sketchgrid');
+setUpGrid();
+
+const slider = document.querySelector('.slider');
+slider.addEventListener('input', changeGridText);
+slider.addEventListener('mouseup', (e) => {
+	setUpGrid(parseInt(e.target.value));
+});
+
 const clearGridBtn = document.querySelector('.clear-grid');
 clearGridBtn.addEventListener('click', clearGrid);
 
-setUpGrid();
 setupColorListeners();

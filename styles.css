@@ -6,7 +6,6 @@
 	padding: 0;
 	margin: 0;
 	font-family: 'Epilogue', sans-serif;
-	border: 1px solid black;
 }
 
 html,
@@ -49,6 +48,7 @@ header h1 {
 	aspect-ratio: 1/1;
 	height: auto;
 	cursor: pointer;
+	border: 1px solid black;
 }
 
 .controls {
