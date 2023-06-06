@@ -1,4 +1,4 @@
-function setUpGrid(cells = 16) {
+function setUpGrid(cells = 4) {
 	grid.textContent = '';
 	for (let i = 0; i < cells; i++) {
 		const row = document.createElement('div');
@@ -37,13 +37,12 @@ function clearGrid() {
 	});
 }
 
-function changeGridText(e) {
+function changeGridText() {
 	const cellAmount = document.querySelector('.cell-amount');
-	cellAmount.textContent = `${e.target.value} X ${e.target.value}`;
+	cellAmount.textContent = `${slider.value} X ${slider.value}`;
 }
 
 const grid = document.querySelector('.sketchgrid');
-setUpGrid();
 
 const slider = document.querySelector('.slider');
 slider.addEventListener('input', changeGridText);
@@ -54,4 +53,6 @@ slider.addEventListener('mouseup', (e) => {
 const clearGridBtn = document.querySelector('.clear-grid');
 clearGridBtn.addEventListener('click', clearGrid);
 
+setUpGrid();
 setupColorListeners();
+changeGridText();
