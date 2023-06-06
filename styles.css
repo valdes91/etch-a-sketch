@@ -94,13 +94,6 @@ main {
 	width: 200px;
 }
 
-.slider::-webkit-slider-thumb {
-	-webkit-appearance: none; /* Override default look */
-	appearance: none;
-	background-color: #04aa6d; /* Green background */
-	cursor: pointer; /* Cursor on hover */
-}
-
 footer {
 	text-align: center;
 }
